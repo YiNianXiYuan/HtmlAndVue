@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.center {
+    position: relative;
+}
+
+
+/* .tu {
+    position: absolute;
+    text-align: center;
+} */
+
+.title {
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 50px;
+}
+
+.left {
+    position: absolute;
+    margin-left: -40%;
+    margin-top: 150px;
+}
+
+.right {
+    position: absolute;
+    margin-left: -15%;
+    margin-top: 150px;
+}

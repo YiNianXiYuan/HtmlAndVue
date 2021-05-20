@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <div id="app">
+        <input type="text" placeholder="输入要搜索的Music" autocomplete="off" v-model="query" @keyup.enter="command">
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                query: ""
+            },
+            methods: {
+                command: function() {
+                    alert("dany'引'号");
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

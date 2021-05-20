@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片切换</title>
+    <link rel="stylesheet" href="./css/imgChange.css">
+</head>
+
+<body>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <div id="mask">
+        <div class="center">
+            <h2 class="title"><img src="./img/LOGO.png" alt=""> b站
+            </h2>
+            <!-- 图片 -->
+            <img :src="imgArr[index]" class="tu" alt="">
+            <!-- 左箭头 -->
+            <!-- javascript:void(0) 中最关键的是 void 关键字， void 是 JavaScript 中非常重要的关键字，该操作符指定要计算一个表达式但是不返回值。 -->
+            <a href="javascript:void(0)" v-show="index!=0" @click="prev" class="left">
+                <img src="./img/prev.png" alt="">
+            </a>
+            <!-- 右箭头 -->
+            <a href="javascript:void(0)" v-show="index<imgArr.length-1" @click="next" class="right">
+                <img src="./img/next.png" alt="">
+            </a>
+        </div>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#mask",
+            data: {
+                imgArr: [
+                    "./img/1.jpg",
+                    "./img/Egiduona.jpg",
+                    "./img/leimu.jpg",
+                    "./img/LeiMuAkua.jpg",
+                    "./img/water.jpg"
+                ],
+                index: 0
+            },
+            methods: {
+                prev: function() {
+                    //if (this.index > 0) {
+                    this.index--;
+                    //}
+
+                },
+                next: function() {
+                    // if (this.index < imgArr.length)
+                    this.index++;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

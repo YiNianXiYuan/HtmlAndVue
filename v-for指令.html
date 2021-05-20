@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-for</title>
+</head>
+
+<body>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <div id="vfor">
+        <input type="button" value="添加数据" @click="add">
+        <input type="button" value="移除数据" @click="remove">
+        <ul>
+            <li v-for="(item,index) in arr">
+                {{index+1}} 工作地点{{item}}
+            </li>
+            <h2 v-for="it in vegetables" v-bind:title="it.name">
+                {{it.name}}
+            </h2>
+        </ul>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#vfor",
+            data: {
+                arr: ["北京", "上海", "广州", "深圳"],
+                vegetables: [{
+                    name: "青椒肉丝"
+                }, {
+                    name: "铁板烧"
+                }]
+
+            },
+            methods: {
+                add: function() {
+                    this.vegetables.push({
+                        name: "火腿"
+                    });
+                },
+                remove: function() {
+                    //this.vegetables.shift();//删除数组第一个元素
+                    this.vegetables.pop(); //删除数组最后一个元素
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

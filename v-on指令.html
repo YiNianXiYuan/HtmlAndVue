@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-on指令</title>
+</head>
+
+<body>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <div id="app">
+        <p><input type="button" value="v-on指令" v-on:click="doIt"></p>
+        <p><input type="button" value="v-on简写" @click="doIt"></p>
+        <p><input type="button" value="v-on Double" v-on:dblclick="doIt"></p>
+        <p><input type="button" value="v-on Double简写" @dblclick="doIt"></p>
+        <!-- <p><input type="button" value="v-on monsenter" @monsenter="doIt"></p> -->
+        <p>
+        <h2 @click="changeFood">{{ food }}</h2>
+        </p>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                food: "西兰花炒蛋"
+            },
+            methods: {
+                doIt: function () {
+                    alert("做it")
+                },
+                changeFood: function () {
+                    //console.log(this.food)
+                    this.food+="delisious"
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

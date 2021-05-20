@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-html指令</title>
+</head>
+
+<body>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <!-- html结构 -->
+    <div id="app">
+        <p v-html="content"></p>
+        <p v-text="content"></p>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                //content:"百度"
+                content:"<a href='http://www.baidu.com'>百度</a>"
+            }
+        })
+
+    </script>
+</body>
+
+</html>

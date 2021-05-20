@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-on补充</title>
+</head>
+
+<body>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <div id="app">
+        <input type="button" value="点击" @click="doIt()">
+        <input type="button" value="点击" @click="doIt(666)">
+        <input type="button" value="点击" @click="doIt(666,777)">
+        <input type="text" @keyup.enter="sayHi">
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+
+            },
+            methods: {
+                // doIt: function() {
+                //     console.log(doIt);
+                // },
+                // doIt: function(p1) {
+                //     console.log(p1);
+                // },
+                doIt: function(p1, p2) {
+                    console.log(p1 + p2);
+                },
+                sayHi: function() {
+                    alert("eating?");
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

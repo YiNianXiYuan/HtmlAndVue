@@ -1,0 +1,22 @@
+.view button {
+    width: 15px;
+    height: 15px;
+    /* background-image: url('../img/x.png') */
+}
+
+.view button img {
+    width: 15px;
+    height: 15px;
+    margin-left: -8px;
+    margin-top: -5px;
+    /* background-image: url('../img/x.png') */
+}
+
+.footer button {
+    margin-left: 100px;
+}
+
+.info img {
+    width: 200px;
+    height: 200px;
+}
